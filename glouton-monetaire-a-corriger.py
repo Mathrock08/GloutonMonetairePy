@@ -3,7 +3,7 @@
 # NF.NSI
 
 # montant de la monnaie donnée
-montant = 1.65
+montant = float(input("Quel est le montant à rendre ?"))
 
 # valeur des pieces disponibles en euro trié dans l'ordre décroissant
 pieces = [ 2, 1, 0.5, 0.2, 0.1, 0.05, 0.02, 0.01 ]
@@ -15,17 +15,17 @@ pieces = [ 2, 1, 0.5, 0.2, 0.1, 0.05, 0.02, 0.01 ]
 def Monnaie(somme, ListeMontant) :
 
     # tableau de nombre de piece max a rendre selon le tableau de pieces
-    for ListeNbPiece[-1] in ListeMontant :
+    ListeNbPieces = [-1 for k in ListeMontant]
 
         # parcours de la liste des pieces
-        for k in range(len(ListeMontant)) :
+    for k in range(len(ListeMontant)) :
 
-            # recupere le nombre de piece selon le quotient (entier //)
-            NbPieces[k]=somme//ListeMontant[y]
+        # recupere le nombre de piece selon le quotient (entier //)
+        ListeNbPieces[k]=somme//ListeMontant[k]
 
-            # somme restante a deduire du montant
-            somme==arrondi(somme%ListeMontant['k'], 2)
+        # somme restante a deduire du montant
+        somme = round(somme % ListeMontant[k], 2)
 
-    return somme,ListeNbPieces
+    return somme, ListeNbPieces
 
-print(Monnaie(montant, pieces))
+print("Pour",montant,"euros",Monnaie(montant, pieces))
